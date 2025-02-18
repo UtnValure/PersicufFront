@@ -1,6 +1,6 @@
 .seccion {
     height: 85vh;
-    background-image: url(C:\Users\Lenovo\Desktop\backup\frontPersicufV46\fondo2.jpg);
+    background-image: url('https://raw.githubusercontent.com/Calvo-Bautista/imagenes/refs/heads/main/fondo2.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
