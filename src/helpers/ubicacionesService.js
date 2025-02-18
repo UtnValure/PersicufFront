@@ -3,7 +3,7 @@ import axios from "axios";
 // GET
 export async function getUbicaciones() {
     try {
-        const response = await axios.get("https://localhost:7050/api/Ubicacion/obtenerUbicaciones");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/Ubicacion/obtenerUbicaciones");
         return response.data; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -15,7 +15,7 @@ export async function getUbicaciones() {
 // POST
 export async function createUbicaciom(nuevaUbicacion) {
     try {
-        const response = await axios.post("https://localhost:7050/api/Ubicaciom/crearUbicacion", nuevaUbicacion);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/Ubicaciom/crearUbicacion", nuevaUbicacion);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response.data.mensaje)
@@ -26,7 +26,7 @@ export async function createUbicaciom(nuevaUbicacion) {
 //DELETE
 export async function deleteUbicacion(UbicacionId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/Ubicaciom/eliminarUbicacion?ID=${UbicacionId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/Ubicaciom/eliminarUbicacion?ID=${UbicacionId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);

@@ -3,7 +3,7 @@ import axios from "axios";
 // GET
 export async function getPedidos() {
     try {
-        const response = await axios.get("https://localhost:7050/api/Pedido/obtenerPedidos");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/Pedido/obtenerPedidos");
         return response.data; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -16,7 +16,7 @@ export async function getPedidos() {
 // pedidoUsuario
 export async function getPedidosUsuario(ID) {
     try {
-        const response = await axios.get(`https://localhost:7050/api/Pedido/obtenerPedidosUsuario?ID=${ID}`);
+        const response = await axios.get(`https://persicufback-production.up.railway.app/api/Pedido/obtenerPedidosUsuario?ID=${ID}`);
         console.log(response.data);
         return response.data; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
@@ -28,7 +28,7 @@ export async function getPedidosUsuario(ID) {
 // ultimo pedido
 export async function getUltimoPedidoUsuario(ID) {
     try {
-        const response = await axios.get(`https://localhost:7050/api/Pedido/obtenerPedidosUsuario?ID=${ID}`);
+        const response = await axios.get(`https://persicufback-production.up.railway.app/api/Pedido/obtenerPedidosUsuario?ID=${ID}`);
         const pedidos = response.data.datos;  // Accede a 'datos' que contiene los pedidos
 
         // Verifica si se obtuvieron pedidos
@@ -49,7 +49,7 @@ export async function getUltimoPedidoUsuario(ID) {
 // POST
 export async function createPedido(nuevoPedido) {
     try {
-        const response = await axios.post("https://localhost:7050/api/Pedido/crearPedido", nuevoPedido);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/Pedido/crearPedido", nuevoPedido);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response.data.mensaje)
@@ -60,7 +60,7 @@ export async function createPedido(nuevoPedido) {
 //DELETE
 export async function deletePedido(pedidoId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/Pedido/eliminarPedido?ID=${pedidoId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/Pedido/eliminarPedido?ID=${pedidoId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);
@@ -69,7 +69,7 @@ export async function deletePedido(pedidoId) {
 
 export async function putPedido(pedidoId, pedidoModificado) {
     try {
-        const response = await axios.put(`https://localhost:7050/api/Pedido/modificarPedido?ID=${pedidoId}`, pedidoModificado);
+        const response = await axios.put(`https://persicufback-production.up.railway.app/api/Pedido/modificarPedido?ID=${pedidoId}`, pedidoModificado);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);

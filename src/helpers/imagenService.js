@@ -3,7 +3,7 @@ import axios from "axios";
 // GET
 export async function getImagenes() {
     try {
-        const response = await axios.get("https://localhost:7050/api/Imagen/obtenerImagenes");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/Imagen/obtenerImagenes");
         return response.data; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -30,7 +30,7 @@ export async function getimgURLporID(id) {
 // POST
 export async function createImagen(nuevaImagen) {
     try {
-        const response = await axios.post("https://localhost:7050/api/Imagen/crearImagen", nuevaImagen);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/Imagen/crearImagen", nuevaImagen);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response.data.mensaje)
@@ -41,7 +41,7 @@ export async function createImagen(nuevaImagen) {
 //DELETE
 export async function deleteImagen(ImagenId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/Imagen/eliminarImagen?ID=${ImagenId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/Imagen/eliminarImagen?ID=${ImagenId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);

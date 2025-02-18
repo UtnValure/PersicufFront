@@ -3,7 +3,7 @@ import axios from "axios";
 // GET
 export async function getTallesNumerico() {
     try {
-        const response = await axios.get("https://localhost:7050/api/TalleNumerico/obtenerTallesNumerico");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/TalleNumerico/obtenerTallesNumerico");
         return response.data;
     } catch (error) {
         console.error(error.response);
@@ -30,7 +30,7 @@ export async function getTalleNumericoID(nombreTalle) {
 // POST
 export async function createTalleNumerico(nuevoTN) {
     try {
-        const response = await axios.post("https://localhost:7050/api/TalleNumerico/crearTalleNumerico", nuevoTN);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/TalleNumerico/crearTalleNumerico", nuevoTN);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response.data.mensaje)
@@ -41,7 +41,7 @@ export async function createTalleNumerico(nuevoTN) {
 // DELETE
 export async function deleteTalleNumerico(TNId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/TalleNumerico/eliminarTalleNumerico?ID=${TNId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/TalleNumerico/eliminarTalleNumerico?ID=${TNId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);

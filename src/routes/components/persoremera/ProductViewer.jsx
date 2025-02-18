@@ -29,7 +29,7 @@ const ProductViewer = forwardRef(({ color, uploadedImage, imagePosition, selecte
   };
 
   return (
-    <div className="product-viewer" ref={ref}>
+    <div className="product-viewer clase1" ref={ref}>
       <div className="product-viewer-container">
         {/* Base colored t-shirt */}
         <div

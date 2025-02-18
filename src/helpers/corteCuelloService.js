@@ -19,7 +19,7 @@ export async function getCorteCuelloID(nombreCorteCuello) {
 
 export async function getCorteCuello() {
     try {
-        const response = await axios.get("https://localhost:7050/api/CorteCuello/obtenerCortesCuello");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/CorteCuello/obtenerCortesCuello");
         return response.data;
     } catch (error) {
         console.error(error.response);
@@ -29,7 +29,7 @@ export async function getCorteCuello() {
 
 export async function createCorteCuello(nuevoCorteCuello) {
     try {
-        const response = await axios.post("https://localhost:7050/api/CorteCuello/crearCorteCuello", nuevoCorteCuello);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/CorteCuello/crearCorteCuello", nuevoCorteCuello);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response.data.mensaje)
@@ -39,7 +39,7 @@ export async function createCorteCuello(nuevoCorteCuello) {
 
 export async function deleteTalleAlfabetico(CorteCuelloId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/CorteCuello/eliminarCorteCuello?ID=${CorteCuelloId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/CorteCuello/eliminarCorteCuello?ID=${CorteCuelloId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);

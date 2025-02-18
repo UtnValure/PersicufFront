@@ -3,7 +3,7 @@ import axios from "axios";
 // // GET
 export async function getColores() {
     try {
-        const response = await axios.get("https://localhost:7050/api/Color/obtenerColores");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/Color/obtenerColores");
         return response.data.datos || []; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -15,7 +15,7 @@ export async function getColores() {
 
 export async function buscarColorPorID(ID) {
     try {
-        const response = await axios.get(`https://localhost:7050/api/Color/buscarColorPorID?ID=${ID}`);
+        const response = await axios.get(`https://persicufback-production.up.railway.app/api/Color/buscarColorPorID?ID=${ID}`);
         return response.data.datos || []; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -26,7 +26,7 @@ export async function buscarColorPorID(ID) {
 // GET
 // export async function getColores() {
 //     try {
-//         const response = await axios.get("https://localhost:7050/api/Color/obtenerColores");
+//         const response = await axios.get("https://persicufback-production.up.railway.app/api/Color/obtenerColores");
 
 //         // Crear un mapa para que los colores sean fácilmente accesibles
 //         const colorMap = response.data.reduce((map, color) => {
@@ -44,7 +44,7 @@ export async function buscarColorPorID(ID) {
 // POST
 export async function createColor(nuevoColor) {
     try {
-        const response = await axios.post("https://localhost:7050/api/Color/crearColor", nuevoColor);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/Color/crearColor", nuevoColor);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response.data.mensaje)
@@ -55,7 +55,7 @@ export async function createColor(nuevoColor) {
 //DELETE
 export async function deleteColor(colorId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/Color/eliminarColor?ID=${colorId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/Color/eliminarColor?ID=${colorId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);

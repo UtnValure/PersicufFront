@@ -2,7 +2,7 @@ import axios from "axios";
 
 export async function getRubros() {
     try {
-        const response = await axios.get("https://localhost:7050/api/Rubro/obtenerRubros");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/Rubro/obtenerRubros");
         return response.data;
     } catch (error) {
         console.error(error.response);
@@ -12,7 +12,7 @@ export async function getRubros() {
 
 export async function createRubro(nuevoRubro) {
     try {
-        const response = await axios.post("https://localhost:7050/api/Rubro/crearRubro", nuevoRubro);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/Rubro/crearRubro", nuevoRubro);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response.data.mensaje)
@@ -22,7 +22,7 @@ export async function createRubro(nuevoRubro) {
 
 export async function buscarRubroPorID(ID) {
     try {
-        const response = await axios.get(`https://localhost:7050/api/RUbro/buscarRubroPorID?ID=${ID}`);
+        const response = await axios.get(`https://persicufback-production.up.railway.app/api/RUbro/buscarRubroPorID?ID=${ID}`);
         return response.data.datos || []; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -32,7 +32,7 @@ export async function buscarRubroPorID(ID) {
 
 export async function deleteRubro(rubroId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/Rubro/eliminarRubro?ID=${rubroId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/Rubro/eliminarRubro?ID=${rubroId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);

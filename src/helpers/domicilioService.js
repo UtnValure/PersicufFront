@@ -3,7 +3,7 @@ import axios from "axios";
 // // GET
 export async function getDomicilios() {
     try {
-        const response = await axios.get("https://localhost:7050/api/Domicilio/obtenerDomicilios");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/Domicilio/obtenerDomicilios");
         return response.data.datos || []; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -14,7 +14,7 @@ export async function getDomicilios() {
 // POST
 export async function createDomicilio(nuevoDomicilio) {
     try {
-        const response = await axios.post("https://localhost:7050/api/Domicilio/crearDomicilio", nuevoDomicilio);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/Domicilio/crearDomicilio", nuevoDomicilio);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response)
@@ -25,7 +25,7 @@ export async function createDomicilio(nuevoDomicilio) {
 //DELETE
 export async function deleteDomicilio(domicilioId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/Domicilio/eliminarDomicilio?ID=${domicilioId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/Domicilio/eliminarDomicilio?ID=${domicilioId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);

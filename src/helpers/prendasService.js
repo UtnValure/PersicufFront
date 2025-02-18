@@ -3,7 +3,7 @@ import axios from "axios";
 // GET
 export async function getPrendas() {
     try {
-        const response = await axios.get("https://localhost:7050/api/Prenda/obtenerPrendas");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/Prenda/obtenerPrendas");
         return response.data; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -14,7 +14,7 @@ export async function getPrendas() {
 // buscar
 export async function buscarPrendas(busqueda) {
     try {
-        const response = await axios.get(`https://localhost:7050/api/Prenda/buscarPrendas?busqueda=${busqueda}`);
+        const response = await axios.get(`https://persicufback-production.up.railway.app/api/Prenda/buscarPrendas?busqueda=${busqueda}`);
         return response.data; 
     } catch (error) {
         console.error(error.response);
@@ -25,7 +25,7 @@ export async function buscarPrendas(busqueda) {
 // prendaUsuario
 export async function getPrendasUsuario(ID) {
     try {
-        const response = await axios.get(`https://localhost:7050/api/Prenda/obtenerPrendasUsuario?ID=${ID}`);
+        const response = await axios.get(`https://persicufback-production.up.railway.app/api/Prenda/obtenerPrendasUsuario?ID=${ID}`);
         return response.data; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -35,7 +35,7 @@ export async function getPrendasUsuario(ID) {
 
 export async function getPrendaPorID(ID) {
     try {
-        const response = await axios.get(`https://localhost:7050/api/Prenda/buscarPrendaPorID?ID=${ID}`);
+        const response = await axios.get(`https://persicufback-production.up.railway.app/api/Prenda/buscarPrendaPorID?ID=${ID}`);
         return response.data; // Devuelve solo el cuerpo de la respuesta
     } catch (error) {
         console.error(error.response);
@@ -46,7 +46,7 @@ export async function getPrendaPorID(ID) {
 // POST
 export async function createPrenda(nuevaPrenda) {
     try {
-        const response = await axios.post("https://localhost:7050/api/Prenda/crearPrenda", nuevaPrenda);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/Prenda/crearPrenda", nuevaPrenda);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response.data.mensaje)
@@ -57,7 +57,7 @@ export async function createPrenda(nuevaPrenda) {
 //DELETE
 export async function deletePrenda(PrendaId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/Prenda/eliminarPrenda?ID=${PrendaId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/Prenda/eliminarPrenda?ID=${PrendaId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);

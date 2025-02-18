@@ -22,7 +22,7 @@ export async function getLargoID(nombreLargo) {
 
 export async function getLargos() {
     try {
-        const response = await axios.get("https://localhost:7050/api/Largo/obtenerLargos");
+        const response = await axios.get("https://persicufback-production.up.railway.app/api/Largo/obtenerLargos");
         return response.data;
     } catch (error) {
         console.error(error.response);
@@ -32,7 +32,7 @@ export async function getLargos() {
 
 export async function createLargo(nuevoLargo) {
     try {
-        const response = await axios.post("https://localhost:7050/api/Largo/crearLargo", nuevoLargo);
+        const response = await axios.post("https://persicufback-production.up.railway.app/api/Largo/crearLargo", nuevoLargo);
         return response;
     } catch (error) {
         console.log("Este es el error: ", error.response.data.mensaje)
@@ -42,7 +42,7 @@ export async function createLargo(nuevoLargo) {
 
 export async function deleteTalleAlfabetico(LargoId) {
     try {
-        const response = await axios.delete(`https://localhost:7050/api/Largo/eliminarLargo?ID=${LargoId}`);
+        const response = await axios.delete(`https://persicufback-production.up.railway.app/api/Largo/eliminarLargo?ID=${LargoId}`);
         return response;
     } catch (error) {
         throw new Error(error.response.data.mensaje);
