@@ -1,0 +1,114 @@
+.mis-prendas-container {
+    padding: 2rem 0;
+    background-color: white;
+  }
+  
+  .mis-prendas-container h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .mis-prendas-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mis-prendas-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .mis-prendas-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    border-bottom: 1px solid #eee;
+    background-color: white;
+  }
+  
+  .mis-prendas-card .card-body {
+    padding: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+  }
+  
+  .mis-prendas-card .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .mis-prendas-card .star-ratings {
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .mis-prendas-card .star-ratings span {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .mis-prendas-card .card-text {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mis-prendas-card .btn-primary {
+    background-color: #007bff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .mis-prendas-card .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .mis-prendas-mensaje {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 2rem;
+    background-color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .mis-prendas-card img {
+      height: 200px;
+    }
+  
+    .mis-prendas-container h3 {
+      font-size: 1.5rem;
+    }
+  
+    .mis-prendas-card .card-title {
+      font-size: 1.1rem;
+    }
+  
+    .mis-prendas-card .card-text {
+      font-size: 1rem;
+    }
+  
+    .mis-prendas-card .btn-primary {
+      font-size: 0.9rem;
+    }
+  }

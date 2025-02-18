@@ -1,0 +1,50 @@
+/* styleheader.css */
+header {
+  background-color: #bd3030; /* Color azul Bootstrap */
+  padding: 1rem 0; /* Espaciado vertical */
+}
+
+.navbar-brand {
+  flex: 1; /* Empuja la barra de búsqueda al centro */
+  text-align: left; /* Alinea el logo a la izquierda */
+}
+
+.navbar-collapse {
+  flex: 2; /* Da más espacio al centro */
+  justify-content: center; /* Centra la barra de búsqueda */
+}
+
+.navbar-nav {
+  margin-left: auto; /* Alinea la navegación a la derecha */
+}
+
+.nav .nav-link {
+  margin-left: 15px; /* Espaciado entre los enlaces */
+  flex-wrap: nowrap; /* Evita que los enlaces se rompan */
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar-brand {
+      text-align: left; /* Mantiene el logo a la izquierda */
+  }
+
+  .navbar-collapse {
+      width: 100%; /* Ocupa todo el ancho en móviles */
+      margin: 10px 0; /* Espaciado vertical */
+  }
+
+  .navbar-nav {
+      text-align: left; /* Alinea la navegación a la izquierda */
+      margin-top: 10px; /* Espaciado superior */
+  }
+
+  .nav .nav-link {
+      margin-left: 0; /* Elimina el margen izquierdo en móviles */
+      margin-bottom: 10px; /* Espaciado inferior entre enlaces */
+  }
+
+  .navbar-toggler {
+      margin-left: auto; /* Alinea el botón de colapso a la derecha */
+  }
+}

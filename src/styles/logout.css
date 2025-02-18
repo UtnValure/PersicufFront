@@ -1,0 +1,27 @@
+/* Estilos adicionales */
+.card {
+    border: 2px solid #dc3545; /* Borde rojo para la tarjeta */
+  }
+  
+  .card-body {
+    padding: 20px; /* Espaciado interno */
+  }
+  
+  .card p {
+    font-size: 1.1rem; /* Tamaño del texto */
+    color: #333; /* Color del texto */
+    font-weight: bold; /* Texto en negrita */
+  }
+  
+  .btn {
+    font-weight: 500; /* Peso de la fuente para los botones */
+    transition: background-color 0.3s ease; /* Transición suave */
+  }
+  
+  .btn-danger:hover {
+    background-color: #c82333; /* Rojo más oscuro al pasar el ratón */
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268; /* Gris más oscuro al pasar el ratón */
+  }

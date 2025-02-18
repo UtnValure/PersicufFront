@@ -1,0 +1,36 @@
+/* DetallesPedido.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .list-group-item {
+    transition: background-color 0.3s ease;
+  }
+  
+  .list-group-item.active {
+    background-color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  @media (max-width: 768px) {
+    .btn {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .list-group-item {
+      font-size: 0.9rem;
+    }
+  }

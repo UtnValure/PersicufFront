@@ -1,0 +1,26 @@
+/* loginForm.css */
+.login-container {
+  background-color: #f8f9fa; /* Fondo claro para el contenedor */
+}
+
+.login-form {
+  background-color: #ffffff; /* Fondo blanco para el formulario */
+  max-width: 400px; /* Ancho máximo del formulario */
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Estilos para los botones en dispositivos móviles */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 20px; /* Reducir el padding en móviles */
+  }
+
+  .d-flex.flex-column.flex-md-row.gap-2 {
+    flex-direction: column; /* Apilar botones verticalmente en móviles */
+  }
+
+  .btn {
+    width: 100%; /* Botones ocupen todo el ancho en móviles */
+    margin-bottom: 10px; /* Espaciado entre botones */
+  }
+}
