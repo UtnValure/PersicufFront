@@ -12,7 +12,7 @@ import PersonalizacionCamperas from './routes/components/PersonalizacionCamperas
 import PersonalizacionZapatos from './routes/components/PersonalizacionZapatos';
 import AdminPanel from './routes/dashboard';
 import ResultadosBusqueda from './routes/components/ResultadosBusqueda';
-import MisPrendas from './routes/components/misprendas';
+import MisPrendas from './routes/components/MisPrendas';
 import MisPedidos from './routes/components/MisPedidos';
 import Footer from './routes/components/footer';
 import AccesoDenegado from './routes/components/accesoDenegado';
